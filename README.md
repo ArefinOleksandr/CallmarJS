@@ -1,3 +1,0 @@
-Callmar
-# CallmarTypescript
-# CallmarTypescript
