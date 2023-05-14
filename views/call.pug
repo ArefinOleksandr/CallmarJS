@@ -1,0 +1,58 @@
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='accountStyle.css')
+    title Document
+  body
+    nav
+      img#logo(src='Callmar 1 1.png' alt='')
+      button
+        | Звонки
+      button
+        | Виджеты
+      button
+        | Статистика
+    main
+      .head
+        p
+          span#email=email 
+        button Выйти
+      .time_to_end
+        p
+          | Осталось 
+          span#minutes=minutes
+          |  до 
+          span#date=date 
+        button Оплатить
+      #your_tarif
+        h1
+          | Ваш тариф истёк
+        button
+          | Перейти к оплате
+      .filters
+        h1
+          | Звонки
+        input#date_filter(type='date' name='')
+        button#today
+          | Сегодня
+        button#yesturday
+          | Вчера
+        button#last_week
+          | Неделя
+        button#update
+          | Обновить
+        select#vidgets(name='')
+          option(value='all_vidgets') Все виджеты
+      #tables
+        #names_column
+          p №
+          p Сайт
+          p Дата звонка
+          p Время звонка
+          p Номер клиента
+          p Номер менеджера
+          p Источник
+        #columns
+script(src="/javascripts/account-client.js") 

@@ -1,0 +1,78 @@
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
+		meta(name='viewport' content='width=device-width, initial-scale=1.0')
+		link(rel='stylesheet' href='/stylesheets/style.css')
+		link(rel='preconnect' href='https://fonts.googleapis.com')
+		link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+		link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap' rel='stylesheet')
+		title=title 
+	body
+		.allScreen
+			.banner
+				img(src='/img/unsplash_cE8cwN2A2-c.png' alt='')
+				div
+					img(src="img/Group 54.png", alt="", srcset="")
+					h1
+						| У Вас остались вопросы?
+					h2
+						| Хотите, перезвоним вам за 27 секунд?
+					.input
+						input#telNo(name='telNo' type='tel' placeholder='+380 -- --- -- --')
+						button Жду звонка
+		header
+			.menu
+				img.logo(src='img/Callmar 1 1.png' alt='')
+				ul
+					li
+						a(href = 'users/register') Регистрация
+					li
+						a(href ='users/auth')
+							button Войти
+			img(src='img/Осминог 5 1.png' alt='')
+			h1 Обратный звонок на сайт
+			p
+				| Получайте в 3 раза больше звонков сразу после установки виджета на Ваш сайт
+				| Сервис окупает свой годовой тариф в первую же неделю
+			button Подключить
+
+		section.step-blocks
+			.step.step-left
+				h1(style='position: absolute') 01
+				h2 Устанавливайте код на сайт
+				p
+					| Вы устанавливаете на свой сайт специальный html-код. Это займет 3 минуты или мы поможем вам
+			.step.step-right
+				h1(style='position: absolute') 02
+				h2 На Вашем сайте появится кнопка и всплывающее окно
+				p
+					| Посетители заходят на Ваш сайт, видят кнопку или всплывающее окно и вводят свой телефон
+			.step.step-left
+				h1(style='position: absolute') 03
+				h2 Сервис автоматически звонит менеджеру и клиенту
+				p
+					| Как только менеджер взял трубку, сервис автоматически связывается с клиентом и соединяет его с менеджером. В среднем за 18,5 сек
+			.step.step-right
+				h1(style='position: absolute') 04
+				h2 Клиент теперь Ваш !
+				p Уже через 28 секунд Ваш сотрудник общается с клиентом и делает продажу!
+			h1 Посмотрите видео как работает виджет
+		section.video
+			iframe(width='560' height='315' src='https://www.youtube.com/embed/BbOkf586700' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+		section.payments
+			.step
+				h2
+					| Бесплатно
+					| О руб.
+				p Тестовая версия на 14 дней и 20 руб. на балансе для проверки качества связи
+				button Попробовать
+			.step
+				h2
+					| При оплате на
+					| 1 год от 299 руб.
+				p
+					| Платите только за наш сервис, связь оплачивается по минимальной цене 4 руб. за минуту.
+				button Подключить
+script(src="/javascripts/titlePage.js")
+script(src="/javascripts/banerTitle.js") 

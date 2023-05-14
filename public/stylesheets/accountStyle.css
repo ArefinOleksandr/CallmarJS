@@ -1,0 +1,168 @@
+body{
+    margin: 0 auto;
+    display: flex;
+}
+
+main{
+    width: 88%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-color: #523A64;
+}
+nav > img{
+    width :144px;
+    height: 143px;
+    padding-top: 40px;
+    margin-bottom: 40px;
+}
+
+nav>button{
+    width: 228px;
+    height: 60px;
+    background-color: #523A64;
+    font-size: 24px;
+    color: #fff;
+    border: aliceblue;
+}
+nav > button:hover{
+    cursor: pointer;
+    background: #D75C78;
+    border: 3px solid #D75C78;
+
+}
+
+
+main > div.head, main div.time_to_end{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+main > div.head > p{
+    color: #4F4F4F;
+    font-size: 18px;
+}
+main > div.head > button{
+    color: #D45B78;
+    border: 2px solid #D45B78;
+}
+
+main > div.head > button:hover{
+    background: #D45B78;
+    color: #fff;
+    cursor: pointer;
+}
+
+main div.time_to_end p{
+    background: #523A64;
+    padding: 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+}
+
+
+main div.time_to_end p span#minutes{
+    background: #D45B78;
+    padding: 10px;
+    border-radius: 5px;
+}  
+
+main div.time_to_end button{
+    background: #523A64;
+    border-radius: 5px;
+    border: aliceblue;
+    color: #fff;
+    font-size: 18px;
+    padding: 20px;
+}
+main div.time_to_end button:hover{
+    background: #D45B78;
+    cursor: pointer;
+}
+
+
+main div#your_tarif{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #FFE1E5;
+    height: 175px;
+}
+
+main div#your_tarif h1{
+    color: #4B4B4B;
+    font-size: 36px;
+}
+
+
+main div#your_tarif button{
+    background: #D75C78;
+    border: aliceblue;
+    color: #fff;
+    padding: 20px;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+main div#your_tarif button:hover{
+    padding: 24px;
+    cursor: pointer;
+}
+ 
+
+div.filters input#date_filter{
+    width: 28%;
+    height: 46px;
+    color: #494949;
+    border: 2px solid #7C7C7C;
+    border-radius: 5px;
+}
+div.filters button{
+    height: 46px;
+    width: 8%;
+    background: #523A64;
+    border: aliceblue;
+    border-radius: 5px;
+    color: #fff;
+}
+
+div.filters button:hover{
+    cursor: pointer;
+    background: #D75C78;
+}
+
+div.filters button#today{
+    margin-left: 20px;
+}
+div.filters select{
+    height: 46px;
+    width: 15.4%;
+    margin-left: 30px;
+    background: #523A64;
+    border: aliceblue;
+    border-radius: 5px;
+    color: #fff;
+}
+
+main div#names_column{
+
+    display: flex;
+    justify-content: space-between;
+
+}
+main div#columns{
+    height: 49vh;
+    background: #EEEEEE;
+
+}

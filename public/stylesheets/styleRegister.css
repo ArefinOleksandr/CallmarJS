@@ -1,0 +1,57 @@
+body{
+    background: linear-gradient(311.56deg, rgba(212, 91, 120, 0.9) -21.39%, rgba(75, 56, 98, 0.9) 75.84%);
+
+}
+main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    height: 100vh;
+    justify-content: space-evenly;
+    width: 37.5%;
+    margin: 0 auto;
+}
+main > a >  img{
+    width: 2.29%;
+}
+main > a {
+    margin-right: 0;
+    text-align: end;
+}
+
+main > h1{
+    margin: 0 auto;
+    margin-left: 0;
+    color: #FCFCFC;
+    font-size: 48px;
+}
+main > p{
+    margin: 0 auto;
+    margin-left: 0;
+    color: #FCFCFC;
+    font-size: 24px;
+}
+
+main > input {
+    height: 5.45%;
+    color: red;
+}
+
+main > button {
+    width: 70.55%;
+    margin: 0 auto;
+    height: 5.45%;
+    font-size: 24px;
+    color: #fff;
+    background: #D75C78;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+main > a {
+    text-decoration: none;
+    color: #FCFCFC;
+}

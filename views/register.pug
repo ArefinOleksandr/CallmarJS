@@ -1,0 +1,32 @@
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
+		meta(name='viewport' content='width=device-width, initial-scale=1.0')
+		link(rel='stylesheet' href='/stylesheets/styleRegister.css')
+		title Document
+	body
+		main
+			a(href='/')
+				img(src='/img/Group 54.png' alt='')
+			h1
+				| Регистрация
+			p
+				| После регистрации вы получите: 
+				br
+				|             10 минут связи - бесплатно 
+				br
+			p
+				| Ваш Email
+			input(id='email' type='text')
+			p Ваше имя
+			input(id='user-name' type='text')
+			p Адрес вашего сайта
+			input(id='url-addres' type='text')
+			p Ваш телефон (на него будут поступать звоноки с сайта)
+			input(id='number-phone' type='text')
+			p Придумайте пароль
+			input(id='password' type='text')
+			button
+				| Регистрация
+script(src="/javascripts/register-client.js") 
