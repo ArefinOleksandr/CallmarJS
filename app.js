@@ -16,27 +16,27 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+//app.set('view engine', 'pug');
 
 mongoose.set('strictQuery', false);
 
-try {
-  mongoose.connect('mongodb+srv://Admin:Kot007kot@calmar.hsdtwcq.mongodb.net/?retryWrites=true&w=majority');
-  console.log('Connection True');
-} catch (error) {
-  console.log('Ошибка с подключением');
-  console.log(error);
-}
+// try {
+//   mongoose.connect('mongodb+srv://Admin:<Kot007kot>@calmar.hsdtwcq.mongodb.net/?retryWrites=true&w=majority');
+//   console.log('Connection True');
+// } catch (error) {
+//   console.log('Ошибка с подключением');
+//   console.log(error);
+// }
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser('secret-key'));
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(express.static('client'));
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/account', accountRouter);
+// app.use('/users', usersRouter);
+// app.use('/account', accountRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
