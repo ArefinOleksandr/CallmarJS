@@ -49,18 +49,20 @@ router.get('/register', (req, res) => {
 
 router.post('/register', async (req, res) => {
 
-  try {
-    if(await (Models.findUserByEmail(req.body.email)).valueOf()){
-      await Models.createUser(req.body);
-      res.sendStatus(200);
-    }
-    else{
-      res.sendStatus(409);
+  Models.createUser(req.body);
+  console.log(req.body);
+  // try {
+  //   if(await (Models.findUserByEmail(req.body.email)).valueOf()){
+  //     await Models.createUser(req.body);
+  //     res.sendStatus(200);
+  //   }
+  //   else{
+  //     res.sendStatus(409);
       
-    }
-  } catch (error) {
-    console.log(error);
-  }
+  //   }
+  // } catch (error) {
+  //   console.log(error);
+  // }
 })
 
 router.delete('/', async (req, res) => {

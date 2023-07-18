@@ -4,12 +4,14 @@ const model = require('../modules/Account');
 const jwt = require('jsonwebtoken');
 
 router.use('/', (req, res, next) => {
+    console.log(req.headers.authorization)
     if(req.headers.authorization){
         jwt.verify(
             req.headers.authorization,
             'dev-net',
             (err, decoded) => {
                 if(err){
+                    console.log(err);
                     res.status(401).json({
                         message: 'Не авторизировано',
                         error: err
@@ -32,10 +34,10 @@ router.get('/calls', async (req, res) => {
         const result = await model.getCalls(req.user).catch((err) =>{
             console.warn(err);
         })
-
+        console.log(result);
         res
         .status(200)
-        .json(result.calls);
+        .json(result);
     }
     else{
         console.log('Not User');

@@ -39,21 +39,32 @@ const closeConnection = async () => {
 
 async function createUser(userData){
     // await connection();
-    user.user_id = uuidv1();
-    user.user_name = userData.name;
-    user.password = userData.password;
-    user.email = userData.email;
-    user.phone = userData.phone;
-    user.url = userData.url;
-
-    await user.save();
+    const user = new UsersModel({
+        user_id : uuidv1(),
+        user_name : userData.name,
+        password : userData.password,
+        email : userData.email,
+        phone : userData.phone,
+        url: userData.url
+    })
+    await user.save()
+    .then(console.log('User Saved!'));
 }
 
-const loginUser = async (email, password) => {
-    const findedUsers = await UsersModel.findOne({email: email, password: password});
-    return findedUsers
-    
-}
+async function loginUser(email, password) {
+    try {
+      const user = await UsersModel.findOne({ email: email, password: password });
+      if (user) {
+        console.log(user);
+        return user;
+      } else {
+        return null;
+        console.log("Неправильное имя пользователя или пароль.");
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
 const findUserByEmail = async (email) =>  {
     let countFindedUsers = await UsersModel.find({email: email})
