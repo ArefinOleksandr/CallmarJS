@@ -1,0 +1,39 @@
+#root{
+    background-color: none;
+}
+#root > nav {
+    flex: 0 0 20%;
+    background: #523A64;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    
+    padding-top: 15%;
+}
+#root > nav > ul {
+    width: 100%;
+    padding: 0
+}
+#root > nav > ul > li{
+    list-style-type: none;
+    width: 100%;
+    margin-top: 10px;
+}
+#root > nav > ul > li > button{
+    width: 100%;
+    background: #523A64;
+    height: 50px;
+    border: none;
+    color: #fff;
+}
+#root > nav > ul > li > button:focus{
+    
+}
+
+
+
+#root > div {
+    flex: 1 1 auto;
+    background-color: #fff;
+}
